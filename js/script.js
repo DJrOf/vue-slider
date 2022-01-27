@@ -16,13 +16,12 @@ const app = new Vue({
       // Determinare la posizione corrente sul valore di origine. 
       currentIndex: 0,
     },
-
   methods: {
     // Funzioni che modificano la posizione d'origine (currentIndex) degli elementi dell'array (slide left/right)
         next() {
           this.currentIndex += 1;
         },
-        prev() {
+        prev(i) {
           this.currentIndex -= 1;
         },
         currentImg() {
@@ -34,4 +33,4 @@ const app = new Vue({
           */
         },
       },
-})
+});
