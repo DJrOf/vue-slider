@@ -26,12 +26,14 @@ const app = new Vue({
     prev: function() {
       this.currentIndex -= 1;
     },
-    currentImg: function() {
-        return this.images[Math.abs(this.currentIndex) % this.images.length];
-      /* Math.abs restituisce il valore assoulto di un numero, 
-      ed assume valore "false" quando questo è negativo.
-      Tramite questa funzione si regola il currentIndex.
-      */
+   
   },
-  },
+  currentImg: function() {
+    return this.images[Math.abs(this.currentIndex) % this.images.length];
+  /* Math.abs restituisce il valore assoulto di un numero, 
+  ed assume valore "false" quando questo è negativo.
+  Tramite questa funzione si regola il 
+  posizionamento del currentIndex all'interno dell'array.
+  */
+},
 })
