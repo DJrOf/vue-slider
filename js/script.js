@@ -19,7 +19,7 @@ const app = new Vue({
     };
   },
   methods: {
-// Funzioni che modificano la posizione d'origine (currentIndex) degli elementi dell'array
+// Funzioni che modificano la posizione d'origine (currentIndex) degli elementi dell'array (slide left/right)
     next: function() {
       this.currentIndex += 1;
     },
@@ -30,7 +30,7 @@ const app = new Vue({
         return this.images[Math.abs(this.currentIndex) % this.images.length];
       /* Math.abs restituisce il valore assoulto di un numero, 
       ed assume valore "false" quando questo è negativo.
-      Tramite questa funzione si regola lo slide.
+      Tramite questa funzione si regola il currentIndex.
       */
   },
   },
